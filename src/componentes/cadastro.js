@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ShowContato from "./showContato"
 
 export default function Cadastro(){
    
@@ -12,18 +13,40 @@ export default function Cadastro(){
             <h2 className="text-center">Novo Contato</h2>
             
             <label className="form-label">Informe nome</label>
-            <input className="form-control" type="text" placeholder="Informe nome" value={nome}></input>
+            <input 
+                className="form-control" 
+                type="text" 
+                placeholder="Informe nome" 
+                value={nome}
+                onChange={txt => setNome(txt.target.value)}
+            />
  
             <label className="form-label">Informe email</label>
-            <input className="form-control" type="text" placeholder="Informe nome" value={email}></input>
+            <input 
+                className="form-control" 
+                type="text" 
+                placeholder="Informe nome" 
+                value={email}
+                onChange={txt => setEmail(txt.target.value)}
+            />
  
             <label className="form-label">Informe telefone</label>
-            <input className="form-control" type="text" placeholder="Informe nome" value={fone}></input>
+            <input 
+                className="form-control" 
+                type="text" 
+                placeholder="Informe nome" 
+                value={fone}
+                onChange={txt => setEmail(txt.target.value)}
+            />
  
             <div className="mt-3 d-flex justify-content-between">
                 <button className="btn btn-primary">Salvar</button>
                 <button className="btn btn-danger">Cancelar</button>
             </div>
+            
+            <ShowContato
+                contato={{nome, email, fone}}
+            />
 
         </div>
     )
