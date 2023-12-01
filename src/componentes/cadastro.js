@@ -36,7 +36,7 @@ export default function Cadastro(){
                 type="text" 
                 placeholder="Informe nome" 
                 value={fone}
-                onChange={txt => setEmail(txt.target.value)}
+                onChange={txt => setFone(txt.target.value)}
             />
  
             <div className="mt-3 d-flex justify-content-between">
