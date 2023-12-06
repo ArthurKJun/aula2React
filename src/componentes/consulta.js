@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ShowContato from './showContato';
  
 export default function Consulta(){
     const [contatos, setContatos] = useState([])
@@ -12,9 +13,11 @@ export default function Consulta(){
     return(
         <div>
             <h2>Consulta de Contatos</h2>
+           <div className='d-flex flex-wrap'>
             {
-                contatos.map(ct => <p>{ct.nome}</p>)
+                contatos.map(ct => <ShowContato contato={ct}/>)
             }
+            </div>
         </div>
     )
  
