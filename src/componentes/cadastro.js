@@ -1,5 +1,4 @@
 import { useState } from "react"
-import ShowContato from "./showContato"
 
 export default function Cadastro(){
    
@@ -10,7 +9,7 @@ export default function Cadastro(){
     function salvar(){
 
        
-    	if(nome == ''){
+    	if(nome === ''){
     		alert('Informe nome')    		
     		return
     	}

@@ -11,7 +11,7 @@ export default function ShowContato(props) {
     return (
        
         <div className="conatiner">
-             <hr/>
+           
             <div className="card col-md-4">
                 
                 <div className="card-body">
