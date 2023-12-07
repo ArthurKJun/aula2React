@@ -1,4 +1,13 @@
 export default function ShowContato(props) {
+    
+    function excluir(){
+        fetch(`http://localhost:8080/contatos/${props.contato.id}`,
+        {
+            method: 'DELETE'
+        })
+        .then(x => alert('contato excluido com sucesso'))
+    }
+    
     return (
        
         <div className="conatiner">
@@ -27,7 +36,17 @@ export default function ShowContato(props) {
                         <span>{props.contato.fone}</span>
                     </div>
 
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <div className="mt-3 d-flex justify-content-between">
+                        <button
+                            className="btn btn-outline-primary"
+                        >Editar</button>
+
+                        <button
+                            onClick={excluir}
+                            className="btn btn-outline-primary"
+                        >Excluir</button>
+                    </div>
+                   
                 </div>
             </div>
         </div>
